@@ -1,0 +1,10 @@
+.store {
+    width: 980px;
+    margin-top: 20px;
+};
+
+.material-icons {
+    font-size: 36px;
+    color:rgb(115, 113, 113);
+    cursor: pointer;
+};

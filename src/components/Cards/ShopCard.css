@@ -1,0 +1,31 @@
+.shop-card{
+    position: relative;
+    width: 300px;
+    height: 300px;
+}
+.shop-card__img { 
+    width: 300px;
+    height: 300px; 
+    border-radius: 5px;
+    box-shadow: 5px 5px 10px rgb(180, 177, 177);     
+};
+
+.shop-card__name {
+    position: absolute;
+    top: 30px;
+    left: 100px;
+
+};
+
+.shop-card__color { 
+   position: absolute;
+   top: 50px;
+   left: 100px;
+};
+
+.shop-card__price {
+    position: absolute;
+    bottom: 20px;
+    left:50px;  
+    color:red;
+};

@@ -1,0 +1,14 @@
+.store__cards-view {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 40px;
+    row-gap: 25px;
+    margin-top: 20px;
+};
+
+.none {
+    display: none;
+
+}
+
+

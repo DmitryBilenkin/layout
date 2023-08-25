@@ -8,17 +8,20 @@
 
  function Store(props) {  
     const initialIcon = 'view_list';
-    const initialClassCards = 'store__cards-view';
-    const initialClassList = 'store__list-view none';
+    const initialShowCardView = true;
+    const initialShowListView = false;
+
+    const cardsClass = 'store__cards-view';
+    const listClass = 'store__list-view';
 
     const [icon, setIcon] = useState(initialIcon);
-    const [cardsClass, setCardsClass] = useState(initialClassCards);
-    const [listClass, setListClass] = useState(initialClassList);
+    const [showCardView, setShowCardView] = useState(initialShowCardView);
+    const [showListView, setShowListView] = useState(initialShowListView);
 
     const onSwitch = () => { 
         setIcon(icon === 'view_list' ? 'view_module' : 'view_list');
-        setListClass(cardsClass === 'store__cards-view' ? 'store__list-view' : 'store__list-view none')
-        setCardsClass(listClass === 'store__list-view' ? 'store__cards-view': 'store__cards-view none');
+        setShowListView((prev)=> !prev)
+        setShowCardView((prev)=> !prev);
         
         };
 
@@ -28,15 +31,20 @@
                 icon={icon}
                 onSwitch={onSwitch}
             />
-                 
-            <CardsView 
-                cards={props.products}
-                cardsClass={cardsClass}
-            />
-            <ListView
-                items={props.products}
-                listClass={listClass}
-            />   
+             <div>
+                {showCardView && <CardsView 
+                    cards={props.products}
+                    cardsClass={cardsClass}
+                />}
+            </div>
+            <div>
+                {showListView && <ListView
+                    items={props.products}
+                    listClass={listClass}
+                /> }  
+            </div> 
+            
+            
     </div>
 
   )

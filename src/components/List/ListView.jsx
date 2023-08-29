@@ -5,7 +5,7 @@ function ListView(props) {
   return (
     <div className={props.listClass}>     
       {props.items.map((item)=>{
-        return <ShopItem item={item}/>
+        return <ShopItem key={Math.random().toFixed(2)} item={item}/>
       })
       }      
     </div>

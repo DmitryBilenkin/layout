@@ -1,24 +1,48 @@
 .shop-item {
-    display:flex;   
-    height: 95px;   
+    display: flex;   
+    max-height: 95px;   
     justify-content: space-between;
+    align-items: center;
     background-color: #f5f5f5;
     margin-bottom: 5px;
     padding: 0 15px;
 };
 
+
+.shop-item__img {
+    width: 95px;
+}
+
 .shop-item__name {
-display: flex;
-align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    width: 130px;
 };
 
 .shop-item__color {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
+    justify-content: center;
+    width: 50px;
 };
 
 .shop-item__price{
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
+    justify-content: center;
+    width: 70px;
     color: red;
 };
+
+.shop-item__add-button{
+    width: 130px;
+    border: 1px solid red;
+    border-radius: 20px;
+    padding: 8px;
+    text-align: center;
+    color: red;
+}
